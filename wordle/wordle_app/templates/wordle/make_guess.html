@@ -1,0 +1,6 @@
+<h1>Make Your Guess</h1>
+<form action="{% url 'wordle:make_guess' %}" method="post">
+  {% csrf_token %}
+  <input type="text" name="guess" maxlength="5" required>
+  <button type="submit">Submit</button>
+</form>
